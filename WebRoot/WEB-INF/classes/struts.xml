@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+	<constant name="struts.devMode" value="true"></constant>
+	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+	<constant name="struts.multipart.maxSize" value="5000000"></constant>
+
+	<package name="global" namespace="" extends="struts-default">
+		<default-action-ref name="defaultAction"></default-action-ref>
+		<action name="defaultAction">
+			<result>index.jsp</result>
+		</action>
+		<action name="index" class="cn.gsw.action.StockAction" method="index">
+			<result>/index.jsp</result>
+			<result name="input">error.jsp</result>
+		</action>	
+	
+	</package>
+
+</struts>

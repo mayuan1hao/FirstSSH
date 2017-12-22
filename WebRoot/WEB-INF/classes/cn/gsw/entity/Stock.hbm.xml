@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping 
+PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="cn.gsw.entity.Stock" table="`STOCK`" >
+		<id name="id" column="`STOCK_ID`" type="integer">
+			<generator class="increment"></generator>
+		</id>
+		<property name="name" column="`NAME`" type="string"/>
+		<property name="unit" column="`UNIT`" type="string"/>
+		<property name="numStock" column="`NUM_STOCK`" type="integer"/>
+		<property name="address" column="`ADDRESS`" type="string"/>
+		<property name="memo" column="`MEMO`" type="string"></property>
+	</class>
+
+</hibernate-mapping>
